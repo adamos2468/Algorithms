@@ -1,5 +1,6 @@
 #include<iostream>
 #include<queue>
+#include<vector>
 #define MAX_NODES 100000
 
 using namespace std;
