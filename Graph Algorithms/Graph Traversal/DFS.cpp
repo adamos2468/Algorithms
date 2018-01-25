@@ -8,7 +8,7 @@ void dfs(int s)
 {
     visited[s]=true;
     for(int i=0; i<adjList[s].size(); i++)
-        if(!visited[s])
+        if(!visited[adjList[s][i]])
             dfs(adjList[s][i]);
 }
 int main()
