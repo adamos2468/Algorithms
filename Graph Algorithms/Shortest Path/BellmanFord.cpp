@@ -37,6 +37,8 @@ bool bellmanFord(int startNode, int nodes, int edges)
                 dist[temp.node_a]=dist[temp.node_b]+temp.weight;
             }
         }
+        if(!neg)
+            break;
     }
     return neg;
 }
