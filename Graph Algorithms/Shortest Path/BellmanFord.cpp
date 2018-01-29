@@ -26,12 +26,12 @@ bool bellmanFord(int startNode, int nodes, int edges)
         for(int j=0; j<edges; j++)
         {
             edge temp=edgeList[j];
-            if(dist[temp.node_b]<dist[temp.node_a]+temp.weight)
+            if(dist[temp.node_b]>dist[temp.node_a]+temp.weight)
             {
                 neg=true;
                 dist[temp.node_b]=dist[temp.node_a]+temp.weight;
             }
-            if(dist[temp.node_a]<dist[temp.node_b]+temp.weight)
+            if(dist[temp.node_a]>dist[temp.node_b]+temp.weight)
             {
                 neg=true;
                 dist[temp.node_a]=dist[temp.node_b]+temp.weight;
