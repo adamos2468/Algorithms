@@ -1,6 +1,6 @@
 #include<iostream>
 #include<vector>
-#define INF 1000000000
+#define INF 1000000007
 #define MAX_NODES 100000
 using namespace std;
 
