@@ -27,6 +27,7 @@ void dijkstra(int start, int nodes)
         int curr=temp_pair.second;
         if(visited[curr])
             continue;
+        visited[curr]=true;
         for(int i=0; i<adjList[curr].size(); i++)
         {
             if(dist[adjList[curr][i].first]>dist[curr]+adjList[curr][i].second)
