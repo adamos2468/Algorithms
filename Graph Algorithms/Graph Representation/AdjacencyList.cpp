@@ -8,6 +8,7 @@ vector< vector<int> > adjList(MAX_NODES, vector<int>());
 int main()
 {
     int n, m;
+    cin>>n>>m;
     for(int i=0; i<m; i++)
     {
         int x, y;
