@@ -14,8 +14,8 @@ void trip(int curr, int prev)
 
 int main()
 {
-    int n, m;
-    for(int i=0; i<m; i++)
+    int n;
+    for(int i=0; i<n-1; i++)
     {
         int x, y;
         cin>>x>>y;
