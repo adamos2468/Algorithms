@@ -87,8 +87,8 @@ int query(int s, int e, int n, int cth)
 } 
 int main()
 {
-    int n, m;
-    cin>>n;
+    int n, m, root;
+    cin>>n>>root;
     for(int i=0; i<n-1; i++)
     {
         int x, y;
@@ -97,7 +97,7 @@ int main()
         adjList[y].push_back(x);
     }
     int cou=0;
-    CreArr(1, 0, &cou);
+    CreArr(root, 0, &cou);
     for(int i=1; i<=n; i++)
         cin>>PathVal[firstEnc[i]];
     countNodesAndPath(1, 0);
