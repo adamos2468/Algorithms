@@ -101,7 +101,6 @@ int main()
     for(int i=1; i<=n; i++)
         cin>>PathVal[firstEnc[i]];
     countNodesAndPath(1, 0);
-    
     build(0, n-1, 1);
     int q;
     cin>>q;
