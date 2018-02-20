@@ -9,9 +9,9 @@ int dist[MAX_NODES];
 bool visited[MAX_NODES];
 void reset(int n)
 {
-    for(int i=0; i<n; i++){
+    for(int i=0; i<=n; i++){
         dist[i]=INF;
-        visited[i]=INF;
+        visited[i]=0;
     }
 }
 void dijkstra(int start, int nodes)
@@ -28,7 +28,7 @@ void dijkstra(int start, int nodes)
         int tempc=curr;
         int temp=dist[curr];
         dist[curr]=INF;
-        for(int i=0; i<nodes; i++)
+        for(int i=1; i<=nodes; i++)
         {
             if(!visited[i] && dist[i]<dist[curr])
             {
@@ -49,8 +49,9 @@ int main()
         adjList[x].push_back(make_pair(y, w));
         adjList[y].push_back(make_pair(x, w));
     }
+    reset(n);
     dijkstra(start, n);
-    for(int i=0; i<n; i++)
+    for(int i=1; i<=n; i++)
     {
         cout<<"Shortest Path from "<<start<<" to "<<i<<" is "<<dist[i]<<endl;
     }
