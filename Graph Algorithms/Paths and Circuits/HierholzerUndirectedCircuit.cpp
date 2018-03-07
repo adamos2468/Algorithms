@@ -49,16 +49,12 @@ int main()
     i--;
     while(i!=sol.end())
     {
-       // cout<<(*i)<<endl;
         if(adjQueue[(*i)].empty())
             i++;
         else
-        {
             i=Hierholzer(i);
-        }
-        for(list<int>::iterator j=sol.begin(); j!=sol.end(); j++)
-            cout<<(*j)<<" ";
-        cout<<endl;
     }
-    
+    for(list<int>::iterator j=sol.begin(); j!=sol.end(); j++)
+            cout<<(*j)<<" ";
+    cout<<endl;
 }
