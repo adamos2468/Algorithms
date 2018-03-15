@@ -15,7 +15,7 @@ bool solve(int r, int c, int n)
             {
                 rows[r]|=1<<i; col[c]|=1<<i; Sudoku[r][c]=i;
                 bool ans;
-                if(c==n-1)
+                if(c==n-1 && r==n-1)
                     return true;
                 else if(r==n-1)
                     ans=solve(0, c+1, n);
@@ -26,9 +26,10 @@ bool solve(int r, int c, int n)
                 rows[r]&=~(1<<i); col[c]&=~(1<<i); Sudoku[r][c]=-1;
             }
         }
+        return false;
     }
     bool ans;
-    if(c==n-1)
+    if(c==n-1 && r==n-1)
         return true;
     else if(r==n-1)
         ans=solve(0, c+1, n);
@@ -46,6 +47,8 @@ int main()
         {
             cin>>Sudoku[i][j];
             Sudoku[i][j]--;
+            rows[i]|=(1<<Sudoku[i][j]);
+            col[j]|=(1<<Sudoku[i][j]);
         }
     }
     bool acc=solve(0, 0, n);
