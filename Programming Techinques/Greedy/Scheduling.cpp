@@ -3,7 +3,7 @@
 #define N 100000
 using namespace std;
 
-pair<int, int> tasks[N];
+pair<int, int> tasks[N];//First->End Second->Start
 
 int main()
 {
