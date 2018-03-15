@@ -2,7 +2,6 @@
 #include<vector>
 #include<algorithm>
 using namespace std;
-
 vector<int> permutation;
 void generate(int n){
     for(int i=0; i<n; i++)
@@ -13,7 +12,6 @@ void generate(int n){
         cout<<endl;
     }while(next_permutation(permutation.begin(), permutation.end()));
 }
-
 int main()
 {
     int n;

@@ -1,8 +1,6 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-
-
 void generate(int n){
     for(int i=0; i<(1<<n); i++)
     {
@@ -18,7 +16,6 @@ void generate(int n){
         cout<<endl;
     }
 }
-
 int main()
 {
     int n;

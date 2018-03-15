@@ -1,9 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-
 vector<int> subSet;
-
 void generate(int k, int n){
     if(k==n)
     {
@@ -17,7 +15,6 @@ void generate(int k, int n){
     generate(k+1, n);
     subSet.pop_back();
 }
-
 int main()
 {
     int n;

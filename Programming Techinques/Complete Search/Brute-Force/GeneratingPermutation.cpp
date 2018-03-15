@@ -2,7 +2,6 @@
 #include<vector>
 #define N 10
 using namespace std;
-
 vector<int> permutation;
 bool chosen[N];
 void generate(int n){
@@ -24,7 +23,6 @@ void generate(int n){
         permutation.pop_back();
     }
 }
-
 int main()
 {
     int n;
