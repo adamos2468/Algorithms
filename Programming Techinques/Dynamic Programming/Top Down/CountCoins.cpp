@@ -14,7 +14,7 @@ int subProb(int v, int c)
         return 1;
     int ans=0;
     for(int i=0; i<c; i++)
-        ans+=subProb(v-coins[i], c);
+        ans=(ans+subProb(v-coins[i], c))%INF;
     memo[v]=ans;
     return ans;
 }

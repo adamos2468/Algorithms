@@ -20,7 +20,7 @@ int main()
             memo[i]=0;
             for(int j=0; j<k; j++)
                 if(i-coins[j]>=0)
-                    memo[i]+=memo[i-coins[j]];
+                    memo[i]=(memo[i]+memo[i-coins[j]])%INF;
         }
     }
     cout<<memo[val]<<endl;
