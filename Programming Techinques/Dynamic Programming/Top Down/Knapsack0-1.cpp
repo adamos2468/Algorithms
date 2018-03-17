@@ -3,7 +3,7 @@
 #define W 10000
 #define INF 1000000007
 using namespace std;
-pair<int, int> items[N];
+pair<int, int> items[N];//<weight, value>
 int memo[N][W];
 int knapsack(int it, int wei)
 {
