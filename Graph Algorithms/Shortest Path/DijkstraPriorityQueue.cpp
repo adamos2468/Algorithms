@@ -13,7 +13,7 @@ void reset(int n)
 {
     for(int i=0; i<n; i++){
         dist[i]=INF;
-        visited[i]=INF;
+        visited[i]=false;
     }
 }
 void dijkstra(int start, int nodes)
@@ -49,6 +49,7 @@ int main()
         adjList[x].push_back(make_pair(y, w));
         adjList[y].push_back(make_pair(x, w));
     }
+    reset(n);
     dijkstra(start, n);
     for(int i=0; i<n; i++)
     {
