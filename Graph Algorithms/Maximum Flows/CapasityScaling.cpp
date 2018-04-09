@@ -8,7 +8,6 @@ vector< vector<int> > adjList(MAX_NODES, vector<int>());
 queue<int>nextNodes;
 int cap[MAX_NODES][MAX_NODES];
 bool added[MAX_NODES][MAX_NODES];
-int fath[MAX_NODES];
 bool visited[MAX_NODES];
 int getFlow(int curr, int sink, int fl, int threshold)
 {
