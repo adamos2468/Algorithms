@@ -30,11 +30,9 @@ node refresh(int s, int e, int cth){
     
     seg[cth*2].lazy+=seg[cth].lazy;
     if(seg[cth].lazy)
-            //cout<<s<<" "<<mid<<" Rassigned Lazy: "<<seg[cth*2].lazy<<endl;
 
     seg[cth*2+1].lazy+=seg[cth].lazy;
     if(seg[cth].lazy)
-            //cout<<mid+1<<" "<<e<<" Rassigned Lazy: "<<seg[cth*2+1].lazy<<endl;
     
     seg[cth*2].maxi+=seg[cth].lazy;
     seg[cth*2+1].maxi+=seg[cth].lazy;
@@ -46,8 +44,6 @@ node refresh(int s, int e, int cth){
     seg[cth*2].sum+=seg[cth].lazy*leftSize;
     seg[cth*2+1].sum+=seg[cth].lazy*rightSize;
     
-    if(seg[cth].lazy)
-        //cout<<s<<" "<<e<<" is Lazy: "<<seg[cth].lazy<<" "<<cth<<endl;
     seg[cth].lazy=0;
 }
 
@@ -99,7 +95,6 @@ void update(int s, int e, const int u,const int ters, const int tere, int cth){
         int meg=e-s+1;
         seg[cth].sum+=meg*u;
         seg[cth].lazy+=u;
-        //cout<<s<<" "<<e<<" Assigned Lazy: "<<seg[cth].lazy<<endl;
         return;
     }
     if(e<ters || tere<s)
@@ -110,9 +105,7 @@ void update(int s, int e, const int u,const int ters, const int tere, int cth){
     int mid=(s+e)/2;
     update(s,mid,u, ters, tere, cth*2);
     update(mid+1, e, u,ters, tere, cth*2+1);
-    //cout<<"Before: "<<s<<" "<<e<<" "<<seg[3].lazy<<endl;
     seg[cth]=merge(seg[cth*2],seg[cth*2+1]);
-    //cout<<"After: "<<s<<" "<<e<<" "<<seg[3].lazy<<endl;
 }
 
 int main(){
@@ -125,7 +118,6 @@ int main(){
     while(q--){
         char t;
         cin>>t;
-        //cout<<t<<" Querry!!!\n";
         if(t=='U'){
             int s, e, u;
             cin>>s>>e>>u;
