@@ -3,7 +3,7 @@
 using namespace std;
 
 struct node{
-    char child[26];
+    int child[26];
     bool isWord;
 };
 
