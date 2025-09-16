@@ -9,7 +9,7 @@ bool bipartiteCheck(int s, int e, int c)
 {
     visited[s]=c;
     if(c==1) c=2;
-    else if(c==2) c==1;
+    else if(c==2) c=1;
     bool ans=true;
     for(int i=0; i<adjList[s].size(); i++)
         if(!visited[adjList[s][i]])
